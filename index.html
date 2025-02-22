@@ -17,9 +17,8 @@
         header {
             background: #002200;
             padding: 20px;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
-            letter-spacing: 1.5px;
             text-transform: uppercase;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -27,26 +26,31 @@
             justify-content: center;
             align-items: center;
         }
-        .menu-icon {
+        .menu-container {
             position: absolute;
-            left: 20px;
+            left: 10px;
             top: 50%;
             transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-icon {
             cursor: pointer;
-            font-size: 22px;
+            font-size: 24px;
             display: block;
         }
         .dropdown {
             position: absolute;
-            left: 20px;
-            top: 60px;
+            left: 0;
+            top: 50px;
             background: #003300;
             width: 180px;
             display: none;
             flex-direction: column;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border-radius: 5px;
-            padding: 5px;
+            padding: 10px;
+            z-index: 1000;
         }
         .dropdown a {
             padding: 8px;
@@ -60,14 +64,14 @@
         .dropdown a:hover {
             background: #005500;
         }
-        .menu-icon:hover + .dropdown, .dropdown:hover {
+        .menu-container:hover .dropdown {
             display: flex;
         }
         .container {
-            max-width: 100%;
-            margin: 30px auto;
+            max-width: 1100px;
+            margin: 20px auto;
             background: rgba(255, 255, 255, 0.97);
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             color: black;
@@ -75,13 +79,10 @@
         }
         h2 {
             color: #004d00;
-            border-bottom: 3px solid #008000;
+            border-bottom: 2px solid #008000;
             padding-bottom: 8px;
             margin-bottom: 20px;
             font-size: 22px;
-        }
-        .section {
-            margin: 20px 0;
         }
         .books {
             display: flex;
@@ -98,53 +99,46 @@
             width: 160px;
             font-size: 14px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-        .book:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         }
         footer {
             background: #002200;
-            padding: 15px;
+            padding: 12px;
             font-size: 14px;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
             color: white;
             text-align: center;
         }
         @media (max-width: 600px) {
-            .container {
+            header {
+                font-size: 24px;
                 padding: 15px;
             }
-            h2 {
-                font-size: 20px;
+            .dropdown {
+                width: 160px;
+                top: 40px;
             }
             .book {
                 width: 140px;
                 font-size: 12px;
-                padding: 10px 12px;
             }
-            .dropdown {
-                width: 160px;
-            }
-            .dropdown a {
-                font-size: 12px;
-                padding: 6px;
+            .container {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <span class="menu-icon">&#9776;</span>
-        <div class="dropdown">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Hadiths</a>
-            <a href="#">Islamic Books</a>
-            <a href="#">Events</a>
-            <a href="#">Contact</a>
+        <div class="menu-container">
+            <span class="menu-icon">&#9776;</span>
+            <div class="dropdown">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Hadiths</a>
+                <a href="#">Books</a>
+                <a href="#">Events</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
         Islamic <span style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">Knowledge</span> Hub
     </header>
@@ -162,10 +156,10 @@
             <h2>Islamic Books</h2>
             <div class="books">
                 <div class="book">Quran</div>
-                <div class="book">Hadith Collections</div>
-                <div class="book">Islamic History</div>
-                <div class="book">Fiqh & Jurisprudence</div>
-                <div class="book">Seerah of Prophet Muhammad</div>
+                <div class="book">Hadiths</div>
+                <div class="book">History</div>
+                <div class="book">Fiqh</div>
+                <div class="book">Seerah</div>
             </div>
         </div>
     </div>
