@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Mubarak</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        header {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+        }
+        .countdown {
+            font-size: 2em;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+        }
+        .quote {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-style: italic;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .lanterns {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            animation: swing 3s infinite ease-in-out alternate;
+        }
+        @keyframes swing {
+            from {
+                transform: translateX(-50%) rotate(-5deg);
+            }
+            to {
+                transform: translateX(-50%) rotate(5deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ramadan Mubarak</h1>
+        <img src="glowing-red-chinese-lantern-transparent-background_84443-28873.jpg" alt="Lantern" class="lanterns">
+    </header>
+    <main>
+        <div class="countdown">
+            <p>Countdown to Ramadan: <span id="countdown-timer">Loading...</span></p>
+        </div>
+        <div class="quote">
+            <p>"Ramadan is the month whose beginning is mercy, whose middle is forgiveness, and whose end is freedom from fire."</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Islamic Events. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function updateCountdown() {
+    const ramadanStartDate = new Date('March 1, 2025 00:00:00').getTime(); // Tentative start date
+    const now = new Date().getTime();
+    const diff = ramadanStartDate - now;
+
+    if (diff <= 0) {
+        document.getElementById('countdown-timer').textContent = "Ramadan has begun!";
+    } else {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown-timer').textContent =
+            `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body>
+</html>
