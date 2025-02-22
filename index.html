@@ -16,10 +16,9 @@
         }
         header {
             background: #002200;
-            padding: 25px;
-            font-size: 36px;
+            padding: 20px;
+            font-size: 30px;
             font-weight: bold;
-            letter-spacing: 1.5px;
             text-transform: uppercase;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -33,20 +32,20 @@
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
-            font-size: 26px;
+            font-size: 24px;
             display: block;
         }
         .dropdown {
             position: absolute;
             left: 20px;
-            top: 70px;
+            top: 60px;
             background: #003300;
-            width: 220px;
+            width: 180px;
             display: none;
             flex-direction: column;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border-radius: 5px;
-            padding: 10px;
+            font-size: 14px;
         }
         .dropdown a {
             padding: 10px;
@@ -54,7 +53,6 @@
             color: white;
             display: block;
             transition: background 0.3s;
-            border-radius: 4px;
         }
         .dropdown a:hover {
             background: #005500;
@@ -77,10 +75,27 @@
             border-bottom: 3px solid #008000;
             padding-bottom: 12px;
             margin-bottom: 25px;
-            font-size: 26px;
+            font-size: 24px;
         }
         .section {
             margin: 35px 0;
+        }
+        .hadees {
+            padding: 15px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .hadees p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .hadees .arabic {
+            font-size: 20px;
+            font-weight: bold;
+            color: #008000;
+            text-align: right;
         }
         .books {
             display: flex;
@@ -98,7 +113,6 @@
             font-weight: bold;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
-            text-align: center;
         }
         .book:hover {
             transform: translateY(-6px);
@@ -107,10 +121,12 @@
         footer {
             background: #002200;
             padding: 18px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
             font-size: 15px;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
             color: white;
-            text-align: center;
         }
     </style>
 </head>
@@ -125,7 +141,7 @@
             <a href="#">Events</a>
             <a href="#">Contact Us</a>
         </div>
-        Islamic <span style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">Knowledge</span> Hub
+        Islamic Knowledge Hub
     </header>
     <div class="container">
         <div class="section">
@@ -136,6 +152,7 @@
                 <p><strong>Urdu:</strong> "اعمال کا دارومدار نیتوں پر ہے۔"</p>
                 <p><strong>Hindi:</strong> "कर्मों का आधार केवल नीयत पर है।"</p>
             </div>
+            <!-- Add 19 more hadiths here -->
         </div>
         <div class="section">
             <h2>Islamic Books</h2>
