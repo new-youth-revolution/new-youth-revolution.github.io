@@ -36,6 +36,30 @@
             font-size: 26px;
             display: block;
         }
+        .dropdown {
+            position: absolute;
+            left: 20px;
+            top: 70px;
+            background: #003300;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+        .dropdown a {
+            padding: 12px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: background 0.3s;
+        }
+        .dropdown a:hover {
+            background: #005500;
+        }
+        .menu-icon:hover + .dropdown, .dropdown:hover {
+            display: flex;
+        }
         .container {
             max-width: 1100px;
             margin: 50px auto;
@@ -109,6 +133,14 @@
 <body>
     <header>
         <span class="menu-icon">&#9776;</span>
+        <div class="dropdown">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Hadiths</a>
+            <a href="#">Islamic Books</a>
+            <a href="#">Events</a>
+            <a href="#">Contact Us</a>
+        </div>
         Islamic <span style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">Knowledge</span> Hub
     </header>
     <div class="container">
@@ -127,16 +159,6 @@
                 <p><strong>Hindi:</strong> "तुम में से कोई तब तक सच्चा ईमान वाला नहीं हो सकता जब तक कि वह अपने भाई के लिए वही पसंद न करे जो वह अपने लिए करता है।"</p>
             </div>
             <!-- Add 18 more hadiths similarly -->
-        </div>
-        <div class="section">
-            <h2>Islamic Books</h2>
-            <div class="books">
-                <div class="book">Quran</div>
-                <div class="book">Hadith Collections</div>
-                <div class="book">Islamic History</div>
-                <div class="book">Fiqh & Jurisprudence</div>
-                <div class="book">Seerah of Prophet Muhammad</div>
-            </div>
         </div>
     </div>
     <footer>
