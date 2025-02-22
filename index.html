@@ -202,6 +202,20 @@
             </div>
         </div>
     </div>
+    <audio id="quranPlayer" autoplay loop>
+        <source src="https://stream.quran.com/live/quran-radio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Ensure autoplay works even if browser blocks it
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("quranPlayer");
+            audio.play().catch(error => {
+                console.log("Autoplay blocked. User interaction needed.");
+            });
+        });
+    </script>
     <footer>
         &copy; 2025 Islamic Knowledge Hub | Hosted on GitHub
     </footer>
