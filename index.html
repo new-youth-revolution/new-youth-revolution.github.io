@@ -41,18 +41,20 @@
             left: 20px;
             top: 70px;
             background: #003300;
-            width: 200px;
+            width: 220px;
             display: none;
             flex-direction: column;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border-radius: 5px;
+            padding: 10px;
         }
         .dropdown a {
-            padding: 12px;
+            padding: 10px;
             text-decoration: none;
             color: white;
             display: block;
             transition: background 0.3s;
+            border-radius: 4px;
         }
         .dropdown a:hover {
             background: #005500;
@@ -80,23 +82,6 @@
         .section {
             margin: 35px 0;
         }
-        .hadees {
-            padding: 15px;
-            background: #f4f4f4;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .hadees p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-        .hadees .arabic {
-            font-size: 20px;
-            font-weight: bold;
-            color: #008000;
-            text-align: right;
-        }
         .books {
             display: flex;
             justify-content: center;
@@ -113,6 +98,7 @@
             font-weight: bold;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            text-align: center;
         }
         .book:hover {
             transform: translateY(-6px);
@@ -121,12 +107,10 @@
         footer {
             background: #002200;
             padding: 18px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             font-size: 15px;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
             color: white;
+            text-align: center;
         }
     </style>
 </head>
@@ -152,13 +136,16 @@
                 <p><strong>Urdu:</strong> "اعمال کا دارومدار نیتوں پر ہے۔"</p>
                 <p><strong>Hindi:</strong> "कर्मों का आधार केवल नीयत पर है।"</p>
             </div>
-            <div class="hadees">
-                <p class="arabic">لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ</p>
-                <p><strong>English:</strong> "None of you truly believes until he loves for his brother what he loves for himself."</p>
-                <p><strong>Urdu:</strong> "تم میں سے کوئی اس وقت تک مومن نہیں ہوسکتا جب تک وہ اپنے بھائی کے لئے وہی پسند نہ کرے جو اپنے لئے پسند کرتا ہے۔"</p>
-                <p><strong>Hindi:</strong> "तुम में से कोई तब तक सच्चा ईमान वाला नहीं हो सकता जब तक कि वह अपने भाई के लिए वही पसंद न करे जो वह अपने लिए करता है।"</p>
+        </div>
+        <div class="section">
+            <h2>Islamic Books</h2>
+            <div class="books">
+                <div class="book">Quran</div>
+                <div class="book">Hadith Collections</div>
+                <div class="book">Islamic History</div>
+                <div class="book">Fiqh & Jurisprudence</div>
+                <div class="book">Seerah of Prophet Muhammad</div>
             </div>
-            <!-- Add 18 more hadiths similarly -->
         </div>
     </div>
     <footer>
