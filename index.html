@@ -17,11 +17,24 @@
         header {
             background: #002200;
             padding: 25px;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 26px;
+            display: block;
         }
         .container {
             max-width: 1100px;
@@ -95,7 +108,8 @@
 </head>
 <body>
     <header>
-        Islamic Knowledge Hub
+        <span class="menu-icon">&#9776;</span>
+        Islamic <span style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">Knowledge</span> Hub
     </header>
     <div class="container">
         <div class="section">
