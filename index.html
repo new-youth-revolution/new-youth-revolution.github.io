@@ -14,6 +14,29 @@
             color: white;
             text-align: center;
         }
+        .hadees-box {
+            width: 90%;
+            max-width: 400px;
+            min-height: 100px;
+            border: 3px solid #2c3e50;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            overflow-y: auto;
+            word-wrap: break-word;
+            resize: vertical;
+        }
+        .hadees-box:focus {
+            outline: none;
+            border-color: #16a085;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
         header {
             background: #002200;
             padding: 20px;
@@ -145,6 +168,13 @@
     <div class="container">
         <div class="section">
             <h2>20 Hadiths of Abu Huraira (RA) from Sahih Bukhari</h2>
+            <div class="hadees-box" contenteditable="true">
+                <h2>Hadees</h2>
+                <p class="arabic">إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ</p>
+                <p><strong>English:</strong> "Actions are but by intentions."</p>
+                <p><strong>Urdu:</strong> "اعمال کا دارومدار نیتوں پر ہے۔"</p>
+                <p><strong>Hindi:</strong> "कर्मों का आधार केवल नीयत पर है।"</p>
+            </div>
             <div class="hadees">
                 <p class="arabic">إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ</p>
                 <p><strong>English:</strong> "Actions are but by intentions."</p>
