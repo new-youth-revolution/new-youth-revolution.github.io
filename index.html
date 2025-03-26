@@ -6,37 +6,24 @@
     <title>Islamic Knowledge Hub</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Global Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #008000, #004d00);
+            background: linear-gradient(to right, #004d00, #006400);
             color: white;
             text-align: center;
         }
-        .hadees-box {
-            width: 90%;
-            max-width: 400px;
-            min-height: 100px;
-            border: 3px solid #2c3e50;
-            padding: 15px;
-            font-size: 18px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-            overflow-y: auto;
-            word-wrap: break-word;
-            resize: vertical;
-        }
-        .hadees-box:focus {
-            outline: none;
-            border-color: #16a085;
-        }
         h2 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+            color: #004d00;
+            border-bottom: 2px solid #00cc00;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 22px;
         }
+
+        /* Header Styles */
         header {
             background: #002200;
             padding: 20px;
@@ -54,21 +41,18 @@
             left: 10px;
             top: 50%;
             transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
         }
         .menu-icon {
             cursor: pointer;
             font-size: 24px;
             display: block;
+            color: white;
         }
         .dropdown {
+            display: none;
             position: absolute;
-            left: 0;
-            top: 50px;
             background: #003300;
             width: 180px;
-            display: none;
             flex-direction: column;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border-radius: 5px;
@@ -78,11 +62,9 @@
         .dropdown a {
             padding: 8px;
             text-decoration: none;
-            font-size: 14px;
             color: white;
             display: block;
             transition: background 0.3s;
-            border-radius: 4px;
         }
         .dropdown a:hover {
             background: #005500;
@@ -90,6 +72,8 @@
         .menu-container:hover .dropdown {
             display: flex;
         }
+
+        /* Container */
         .container {
             max-width: 1100px;
             margin: 20px auto;
@@ -100,13 +84,25 @@
             color: black;
             text-align: left;
         }
-        h2 {
-            color: #004d00;
-            border-bottom: 2px solid #008000;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            font-size: 22px;
+
+        /* Hadees & Khutba Box */
+        .hadees-box {
+            width: 90%;
+            max-width: 600px;
+            min-height: 100px;
+            border: 2px solid #2c3e50;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px auto;
+            overflow-y: auto;
+            word-wrap: break-word;
         }
+
+        /* Books Section */
         .books {
             display: flex;
             justify-content: center;
@@ -122,26 +118,51 @@
             width: 160px;
             font-size: 14px;
             text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease;
         }
+        .book:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
         footer {
             background: #002200;
             padding: 12px;
             font-size: 14px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
             color: white;
             text-align: center;
         }
+
+        /* Audio Controls */
+        .audio-controls {
+            margin-top: 20px;
+        }
+        #playPauseBtn {
+            padding: 10px 18px;
+            background-color: #008000;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #playPauseBtn:hover {
+            background-color: #005500;
+        }
+
+        /* Responsive Design */
         @media (max-width: 600px) {
             header {
-                font-size: 24px;
+                font-size: 22px;
                 padding: 15px;
             }
             .dropdown {
-                width: 160px;
+                width: 150px;
                 top: 40px;
             }
             .book {
-                width: 140px;
+                width: 120px;
                 font-size: 12px;
             }
             .container {
@@ -150,7 +171,10 @@
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Header -->
     <header>
         <div class="menu-container">
             <span class="menu-icon">&#9776;</span>
@@ -165,59 +189,72 @@
         </div>
         Islamic <span style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">Knowledge</span> Hub
     </header>
+
+    <!-- Main Content -->
     <div class="container">
         <div class="section">
             <h2>UMATI MUHAMMAD SALLALLAHU ALAIHI WASALLAM</h2>
-            <div class="hadees-box" contenteditable="false">
+
+            <!-- Hadees Section -->
+            <div class="hadees-box">
                 <h2>Hadees</h2>
                 <p class="arabic">إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ</p>
                 <p><strong>English:</strong> "Actions are but by intentions."</p>
-                <p><strong>Urdu:</strong> "اعمال کا دارومدار نیتوں پر ہے۔"</p>
-                <p><strong>Hindi:</strong> "कर्मों का आधार केवल नीयत पर है।"</p>
             </div>
-            <div class="hadees-box" contenteditable="false">
+
+            <!-- Khutba Section -->
+            <div class="hadees-box">
                 <h2>Khutba</h2>
                 <p class="arabic">الحمد للهِ وحدهُ والصلاةُ والسلامُ على مَن لا نَبِيّ بَعدَهُ.</p>
                 <p><strong>English:</strong> "All praise is due to Allah alone, and peace and blessings be upon the one after whom there is no prophet."</p>
-                <p class="arabic">يا معشر المسلمين! لقد نزل في كتابِ اللهِ: "وَمَن يَتَجَاوَز حُدُودَ اللهِ فَقَدْ ظَلَمَ نَفْسَهُ" (الطلاق: 1). اليوم نرى في مجتمعنا من السيئات ما يُغضبُ اللهَ وَرسولَهُ: من الزِّنَا وَالعَلَاقَاتِ الحَرامِةِ وَشُّرْبِ المُسْكِراتِ وَتَعَاطِي المَخَدِّراتِ.</p>
-                <p><strong>English:</strong> "O Muslims! Allah has revealed in His Book: "And whoever transgresses the limits of Allah has certainly wronged himself." (At-Talaq: 1). Today, we see in our society many evils that anger Allah and His Messenger: fornication, unlawful relationships, drinking intoxicants, and consuming drugs."</p>
-                <p class="arabic">فَكيف يريد المسلم الفلاح وقلبُهُ مُمْتَلِئٌ بحَبِّ الحَرامِ؟ قَال اللهُ سُبْحَانَهُ: "وَلا تَقْرَبُوا الزِّنَا إِنَّهُ كَانَ فَاحِشَةً وَسَاءَ سَبِيلًا" (الإسراء: 32).</p>
-                <p><strong>English:</strong> "How can a Muslim seek success while his heart is filled with love for the forbidden? Allah says: "And do not approach fornication. Indeed, it is an abomination and an evil way." (Al-Isra: 32)."</p>
-                <p class="arabic">يا إخوَة الإيمان! لنُقلِع عَن المعاصي ولنُطهِّر قُلوبَنا ولنعود إلى رَّبِّنا توبةً نَصُوحاً.</p>
-                <p><strong>English:</strong> "O believers! Let us abandon sins, purify our hearts, and return to our Lord in sincere repentance."</p>
-                <p class="arabic">وصلّى اللهُ عَلى سَيِدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وصَحْبِهِ أَجْمَعِينَ.</p>
-                <p><strong>English:</strong> "May Allah send blessings upon our Prophet Muhammad and his family and companions."</p>            
-                <p><strong>Urdu:</strong> ""</p>
-                <p><strong>Hindi:</strong> ""</p>
             </div>
         </div>
+
+        <!-- Books Section -->
         <div class="section">
             <h2>Islamic Books</h2>
             <div class="books">
-                <div class="book">Quran</div>
-                <div class="book">Hadiths</div>
-                <div class="book">History</div>
-                <div class="book">Fiqh</div>
-                <div class="book">Seerah</div>
+                <div class="book" onclick="alert('Opening Quran...')">Quran</div>
+                <div class="book" onclick="alert('Opening Hadiths...')">Hadiths</div>
+                <div class="book" onclick="alert('Opening History...')">History</div>
+                <div class="book" onclick="alert('Opening Fiqh...')">Fiqh</div>
+                <div class="book" onclick="alert('Opening Seerah...')">Seerah</div>
             </div>
         </div>
-    </div>
-    <audio id="quranPlayer" autoplay loop>
-        <source src="https://stream.quran.com/live/quran-radio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
 
-    <script>
-        // Ensure autoplay works even if browser blocks it
-        document.addEventListener("DOMContentLoaded", function() {
-            let audio = document.getElementById("quranPlayer");
-            audio.play().catch(error => {
-                console.log("Autoplay blocked. User interaction needed.");
-            });
-        });
-    </script>
+        <!-- Audio Controls -->
+        <div class="audio-controls">
+            <button id="playPauseBtn" onclick="toggleAudio()">Play Quran Audio</button>
+        </div>
+
+        <audio id="quranPlayer" loop>
+            <source src="https://stream.quran.com/live/quran-radio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Footer -->
     <footer>
         &copy; 2025 Islamic Knowledge Hub | Hosted on GitHub
     </footer>
+
+    <!-- JavaScript for Audio Controls -->
+    <script>
+        let audio = document.getElementById("quranPlayer");
+        let playPauseBtn = document.getElementById("playPauseBtn");
+        let isPlaying = false;
+
+        function toggleAudio() {
+            if (isPlaying) {
+                audio.pause();
+                playPauseBtn.innerText = "Play Quran Audio";
+            } else {
+                audio.play().catch(error => console.log("Autoplay blocked. Interaction needed."));
+                playPauseBtn.innerText = "Pause Quran Audio";
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+
 </body>
 </html>
